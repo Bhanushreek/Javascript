@@ -21,4 +21,4 @@ let state;
 console.log(typeof undefined) //output :- undefined
 console.log(typeof null) // output :- object
 
-//ecma specifications, mdn documentation
+//ecma specifications, mdn 
