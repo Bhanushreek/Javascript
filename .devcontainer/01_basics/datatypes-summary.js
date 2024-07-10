@@ -9,7 +9,7 @@ Because data type will automatically assigned at the time of compilation or code
 const id = Symbol('123')
 const anotherId = Symbol('123')
 
-console.log(id === anotherId)
+//console.log(id === anotherId)
 
 // Refrence (Non-primitive)
 
@@ -22,7 +22,7 @@ let myObj = {
 }
 
 const myFuntion = function(){
-    console.log("Hello world!");
+    //console.log("Hello world!");
 }
 
 // console.log(typeof {variable}) => gives datatype
@@ -42,3 +42,26 @@ const myFuntion = function(){
        Function  =>  function
        Object  =>  object
 */
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Stack memory (Primitive), Heap memory (Non-primitive)
+
+let myYoutubeName = "bhans"
+let anotherName = myYoutubeName
+
+anotherName = "teaandpuri"
+
+// console.log(myYoutubeName)
+// console.log(anotherName)
+
+let userOne = {
+    email: "user1@google.com",
+    upi: "user@ybl",
+}
+
+let userTwo = userOne
+userTwo.email = "user2@google.com"
+
+console.log(userOne.email)
+console.log(userTwo.email)
