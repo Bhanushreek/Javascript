@@ -25,5 +25,15 @@ map.set('IN', 'India')
 // console.log(map);
 
 for (const [key, value] of map) {
-    console.log(key, ":-", value);
+    // console.log(key, ":-", value);
 }
+
+const myObject = {
+    'game1': "NFS",
+    'game2': "spiderman"
+}
+
+// for (const [key, value] of myObject) {
+//     console.log(key, ":-", value);
+// } // not iteratable
+
