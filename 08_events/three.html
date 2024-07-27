@@ -14,8 +14,9 @@
     const sayDate = function (str){
         console.log(str, Date.now());
     }
+    let intervalId
     document.querySelector('#start').addEventListener('click', function(){
-        const intervalId = setInterval(sayDate, 1000, "Bhanu")
+        intervalId = setInterval(sayDate, 1000, "Bhanu")
         console.log("STARTED");
     })
     document.querySelector('#stop').addEventListener('click', function(){

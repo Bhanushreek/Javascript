@@ -5,7 +5,7 @@
 
 # Solution Code
 
-## project 1
+## Project 1
 ```javascript
 console.log("Bhanu")
 
@@ -41,7 +41,7 @@ buttons.forEach(function (button) {
 })
 ```
 
-## project 2
+## Project 2
 ```javascript
 const form = document.querySelector('form')
 // this usecase will give empty
@@ -67,7 +67,7 @@ form.addEventListener('submit', function(e){
 })
 ```
 
-## project 3
+## Project 3
 ```javascript
 const clock = document.getElementById("clock")
 // const clock = document.querySelector("#clock")
@@ -82,7 +82,7 @@ setInterval(function(){
 }, 1000);
 ```
 
-## project 4
+## Project 4
 ```javascript
 let randomNumber = parseInt(Math.random() * 100 + 1);
 
@@ -176,4 +176,63 @@ function newGame() {
   });
 }
 
+```
+
+# Project 5
+``` javascript
+const insert = document.getElementById('insert')
+
+window.addEventListener('keydown', (e)=> {
+  insert.innerHTML = `
+  <div class='color'>
+  <table>
+  <tr>
+    <th>Key</th>
+    <th>KeyCode</th>
+    <th>Code</th>
+  </tr>
+  <tr>
+    <td>${e.key === ' ' ? 'Space': e.key}</td>
+    <td>${e.keyCode}</td>
+    <td>${e.code}</td>
+  </tr>
+</table>
+  </div>
+  `
+})
+```
+
+# Project 6
+```javascript
+// generate random color
+
+const randomColor = function(){
+  const hex = '0123456789ABCDEF';
+  let color = '#';
+  for(let i=0; i<6; i++){
+    color += hex[Math.floor(Math.random() * 16)]
+  }
+  return color;
+}
+
+let intervalID;
+const startChangingColor = function(){
+  if(!intervalID){
+    intervalID = setInterval(changeBgColor, 1000)
+  }
+
+  function changeBgColor (){
+    document.body.style.backgroundColor = randomColor();
+  }
+}
+const stopChangingColor = function(){
+  clearInterval(intervalID);
+  intervalID = null;
+}
+
+document.querySelector("#start").addEventListener
+('click', startChangingColor)
+
+document.querySelector("#stop").addEventListener
+('click', stopChangingColor)
 ```
